@@ -14,7 +14,9 @@ public class Main
 	{
 	    String content = readFile("example.edf", false);
 	    EdifElement edif = new EdifElement(content);
-	    System.out.println(edif.toJson());
+	    String json = edif.toJson();
+	    System.out.println(json);
+	    writeFile("example.json", json);
 	}
 	
 	/**
@@ -66,7 +68,8 @@ public class Main
         try
         {
             br.close();
-        } catch (IOException e)
+        }
+        catch (IOException e)
         {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -74,5 +77,33 @@ public class Main
         
         // return the read lines
         return content;
+	}
+	
+	/**
+	 * Write string to file
+	 */
+	public static void writeFile(String filename, String content)
+	{
+	    // open file for writing
+	    BufferedWriter writer = null;
+	    try
+	    {
+	        writer = new BufferedWriter(new FileWriter(filename));
+	        writer.write(content);
+	    }
+	    catch ( IOException e)
+	    {
+            e.printStackTrace();
+	    }
+
+	    // close file
+	    try
+        {
+            writer.close();
+        }
+        catch ( IOException e)
+        {
+            e.printStackTrace();
+        }
 	}
 }

@@ -8,7 +8,7 @@ import java.util.*;
 public class EdifElement
 {
     private String name = null;
-    private int hierarchyLevel = 0;
+    private int hierarchyLevel;
     private List<String> attributes = new ArrayList<>();
     private List<EdifElement> subElements = new ArrayList<>();
     
@@ -233,7 +233,7 @@ public class EdifElement
             return identation;
         
         identation = "";
-        for (int i=0; i<hierarchyLevel; i++)
+        for (int i=0; i<getHierarchyLevel(); i++)
             identation += getIdentationVariant();
         return identation;
     }

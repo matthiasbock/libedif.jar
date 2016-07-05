@@ -6,3 +6,4 @@ build/
 *.class
 *.edf
 *.edif
+*.json
