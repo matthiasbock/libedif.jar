@@ -2,6 +2,8 @@ package controller;
 
 import java.io.*;
 
+import model.edif.EdifElement;
+
 /**
  * Open EDIF netlist file from Lattice Semiconductor's iCEcube2,
  * parse it and export as JSON
@@ -11,7 +13,7 @@ public class Main
 	public static void main(String[] args)
 	{
 	    String content = readFile("example.edf", false);
-	    System.out.println(content);
+	    EdifElement edif = new EdifElement(content);
 	}
 	
 	/**
