@@ -14,6 +14,7 @@ public class Main
 	{
 	    String content = readFile("example.edf", false);
 	    EdifElement edif = new EdifElement(content);
+	    System.out.println(edif.toJson());
 	}
 	
 	/**

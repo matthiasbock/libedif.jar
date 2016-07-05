@@ -8,8 +8,11 @@ import java.util.*;
 public class EdifElement
 {
     private String name = null;
+    private int hierarchyLevel = 0;
     private List<String> attributes = new ArrayList<>();
     private List<EdifElement> subElements = new ArrayList<>();
+    
+    private String identation = null;
     
     /**
      * Initialize an EDIF element
@@ -19,6 +22,8 @@ public class EdifElement
      */
     public EdifElement(String s, int hierachyLevel)
     {
+        setHierarchyLevel(hierarchyLevel);
+        
         // find first opening bracket
         int indexOpen = s.indexOf('(');
         
@@ -81,7 +86,7 @@ public class EdifElement
 
                         EdifElement e = new EdifElement(subElement, hierachyLevel+1);
                         addSubElement(e);
-                        System.out.printf("\tNew sub-element: %s\n", e.getName());
+                        //System.out.printf("\tNew sub-element: %s\n", e.getName());
                         
                         // treat the closing bracket as a separator
                         insideSubElement = false;
@@ -173,6 +178,33 @@ public class EdifElement
         return b == ')';
     }
     
+    public static String getIdentationVariant()
+    {
+        return "\t";
+    }
+    
+    /**
+     * Export this element and it's subelements to JSON 
+     * 
+     * @return: String
+     */
+    public String toJson()
+    {
+        String s = getIdentation() + "{" + System.lineSeparator();
+
+        if (getAttributes().size() > 0)
+            s += getIdentation() + getIdentationVariant() + "\"attributes\": [" + String.join(", ", getAttributes(true)) + "]," + System.lineSeparator();
+        
+        for (EdifElement subElement : getSubElements())
+        {
+            s += getIdentation() + getIdentationVariant() + "\"" + subElement.getName() + "\": " + System.lineSeparator();
+            s += subElement.toJson();
+        }
+        
+        s += getIdentation() + "}," + System.lineSeparator();
+        return s;
+    }
+    
     
     public String getName()
     {
@@ -181,18 +213,52 @@ public class EdifElement
 
     public void setName(String name)
     {
-        System.out.println("Element name: \""+name+"\"");
+        //System.out.println("Element name: \""+name+"\"");
         this.name = name;
     }
 
+    public int getHierarchyLevel()
+    {
+        return hierarchyLevel;
+    }
+    
+    public void setHierarchyLevel(int level)
+    {
+        hierarchyLevel = level;
+    }
+    
+    public String getIdentation()
+    {
+        if (identation != null)
+            return identation;
+        
+        identation = "";
+        for (int i=0; i<hierarchyLevel; i++)
+            identation += getIdentationVariant();
+        return identation;
+    }
+    
     public List<String> getAttributes()
     {
         return attributes;
     }
     
+    public List<String> getAttributes(boolean quoted)
+    {
+        if (!quoted)
+            return getAttributes();
+        
+        List<String> l = new ArrayList<>();
+        for (String s : getAttributes())
+        {
+            l.add("\"" + s + "\"");
+        }
+        return l;
+    }
+    
     public boolean addAttribute(String s)
     {
-        System.out.printf("\tNew attribute: %s\n", s);
+        //System.out.printf("\tNew attribute: %s\n", s);
         return attributes.add(s);
     }
 
