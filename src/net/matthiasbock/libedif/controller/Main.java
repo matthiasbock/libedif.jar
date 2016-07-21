@@ -1,8 +1,8 @@
-package controller;
+package net.matthiasbock.libedif.controller;
 
 import java.io.*;
 
-import model.edif.EdifElement;
+import net.matthiasbock.libedif.model.edif.EdifElement;
 
 /**
  * Open EDIF netlist file from Lattice Semiconductor's iCEcube2,
@@ -13,6 +13,9 @@ public class Main
 	public static void main(String[] args)
 	{
 	    String content = readFile("example.edf", false);
+	    if (content == null)
+	        return;
+	    
 	    EdifElement edif = new EdifElement(content);
 	    String json = edif.toJson();
 	    System.out.println(json);
@@ -33,10 +36,11 @@ public class Main
         try
         {
             br = new BufferedReader(new FileReader(filename));
-        } catch (FileNotFoundException e)
+        }
+        catch (FileNotFoundException e)
         {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            System.out.printf("File not found: %s\n", filename);
+            return null;
         }
         
         // read EDIF to String

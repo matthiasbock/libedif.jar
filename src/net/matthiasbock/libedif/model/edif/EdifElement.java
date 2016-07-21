@@ -1,4 +1,4 @@
-package model.edif;
+package net.matthiasbock.libedif.model.edif;
 
 import java.util.*;
 
