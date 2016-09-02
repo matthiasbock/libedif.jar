@@ -14,43 +14,33 @@ public class EdifElement
     private List<EdifElement> subElements = new ArrayList<>();
     
     private String identation = null;
+
+    /**
+     * Parse an EDIF from String
+     * 
+     * @param s: EDIF string to be parsed
+     */
+    public EdifElement(String s)
+    {
+        this(s, 0);
+    }
     
     /**
-     * Initialize an EDIF element
-     * Parse element properties from String
+     * Initialize an EDIF element,
+     * parse element properties from String
+     * and insert at specified hierarchy level
      * 
-     * @param s: String to parse EDIF from 
+     * @param s: String from which to parse EDIF objects
      */
-    public EdifElement(String s, int hierachyLevel)
+    public EdifElement(String s, int level)
     {
-        setHierarchyLevel(hierarchyLevel);
+        setHierarchyLevel(level);
         
         // find first opening bracket
         int indexOpen = s.indexOf('(');
         
         // find corresponding closing bracket
-        int indexClose = -1;
-        int numOpenBrackets = 1;
-        byte[] sourceBytes = s.getBytes();
-        for (int i=indexOpen+1; i<s.length(); i++)
-        {
-            if (sourceBytes[i] == '(')
-            {
-                // a sub-element bracket was openend
-                numOpenBrackets++;
-            }
-            else if (sourceBytes[i] == ')')
-            {
-                // a bracket was closed
-                numOpenBrackets--;
-                if (numOpenBrackets == 0)
-                {
-                    // the initial opening bracket is closed now
-                    indexClose = i;
-                    break;
-                }
-            }
-        }
+        int indexClose = indexOfClosingBracket(s, indexOpen);
 
         // closing bracket was not found
         if (indexClose < 0)
@@ -60,21 +50,29 @@ public class EdifElement
         }
         
         // parse element without brackets
-        s = s.substring(indexOpen+1, indexClose-1);
-        sourceBytes = s.getBytes();
-        
-        int indexPreviousSeparator = -1;
-        boolean previousByteWasSeparator = false;
-        
+        parseBracketEnclosedString(s.substring(indexOpen+1, indexClose-1));
+    }
+
+    /**
+     * 
+     * @param content
+     */
+    private void parseBracketEnclosedString(String content)
+    {
+        int indexPreviousWhitespaceCharacter = -1;
+        boolean previousCharacterWasWhitespace = false;
+
+        int numOpenBrackets = 0;
         boolean insideSubElement = false;
         // index of the sub-element's opening bracket
         int indexSubElementBegin = 0;
 
-        for (int currentIndex=0; currentIndex<s.length(); currentIndex++)
+        for (int currentIndex=0; currentIndex < content.length(); currentIndex++)
         {
             if (insideSubElement)
             {
-                if (isClosingBracket(sourceBytes[currentIndex]))
+                // possibly end of sub-element reached
+                if (isClosingBracket(content.charAt(currentIndex)))
                 {
                     numOpenBrackets--;
                     
@@ -83,39 +81,39 @@ public class EdifElement
                     {
                         // the sub-element ends here
                         // including the byte at currentIndex => currentIndex+1
-                        String subElement = s.substring(indexSubElementBegin, currentIndex+1);
+                        String subElement = content.substring(indexSubElementBegin, currentIndex+1);
 
-                        EdifElement e = new EdifElement(subElement, hierachyLevel+1);
-                        addSubElement(e);
-                        //System.out.printf("\tNew sub-element: %s\n", e.getName());
+                        // parse recursively
+                        addSubElement( new EdifElement(subElement, getHierarchyLevel()+1) );
                         
                         // treat the closing bracket as a separator
                         insideSubElement = false;
-                        previousByteWasSeparator = true;
-                        indexPreviousSeparator = currentIndex;
+                        previousCharacterWasWhitespace = true;
+                        indexPreviousWhitespaceCharacter = currentIndex;
                     }
                 }
-                else if (isOpeningBracket(sourceBytes[currentIndex]))
+                else if (isOpeningBracket(content.charAt(currentIndex)))
                 {
                     // the sub-element has sub-elements of it's own
-                    // disregard them, they will be parsed later
+                    // disregard them, they will be parsed below the EdifElement constructor,
+                    // which is invoked at the closing bracket of the current sub-element
                     numOpenBrackets++;
                 }
             }
             else
             {
-                if (isSeparator(sourceBytes[currentIndex]))
+                if (isWhitespace(content.charAt(currentIndex)))
                 {
-                    if (previousByteWasSeparator)
+                    if (previousCharacterWasWhitespace)
                     {
-                        // disregard multiple separators in a row
+                        // disregard multiple whitespace characters in a row
                     }
                     else
                     {
-                        // interpret the string between the last separator and this separator
-                        String attribute = s.substring(indexPreviousSeparator+1, currentIndex).trim();
+                        // extract the string between the last and the current whitespace character
+                        String attribute = content.substring(indexPreviousWhitespaceCharacter+1, currentIndex).trim();
 
-                        // disregard empty spaces after sub-elements' closing brackets
+                        // disregard empty spaces after the sub-element's closing brackets
                         if (attribute.length() > 0)
                         {
                             if (getName() == null)
@@ -131,55 +129,97 @@ public class EdifElement
                         }
                     }
                     
-                    indexPreviousSeparator = currentIndex;
-                    previousByteWasSeparator = true;
+                    indexPreviousWhitespaceCharacter = currentIndex;
+                    previousCharacterWasWhitespace = true;
                 }
                 else
                 {
-                    previousByteWasSeparator = false;
+                    previousCharacterWasWhitespace = false;
                     
-                    if (isOpeningBracket(sourceBytes[currentIndex]))
+                    if (isOpeningBracket(content.charAt(currentIndex)))
                     {
-                        // a sub-element begins
+                        // a sub-element begins here
+                        numOpenBrackets = 1;
                         insideSubElement = true;
                         indexSubElementBegin = currentIndex;
-                        numOpenBrackets = 1;
                     }
                 }
             }
         }
     }
-    
-    /**
-     * If the constructor is invoked without hierarchy argument,
-     * then top level is assumed.
-     * 
-     * @param s: EDIF string to be parsed
-     */
-    public EdifElement(String s)
-    {
-        this(s, 0);
-    }
+
 
     /**
-     * Check, if a given char is a separator
+     * Find the index of the corresponding closing bracket
+     * 
+     * @param s: Haystack
+     * @param indexOpen: Index of opening bracket, for which the closing bracket shall be found
+     * @return: Index of closing bracket
      */
-    public static boolean isSeparator(byte b)
+    protected static int indexOfClosingBracket(String s, int indexOpen)
+    {
+        // -1 = closing bracket not found
+        int indexClose = -1;
+        
+        // keep count of opened brackets 
+        int numOpenBrackets = 1;
+        
+        // search for closing bracket
+        byte[] sourceBytes = s.getBytes();
+        for (int i=indexOpen+1; i<s.length(); i++)
+        {
+            if (isOpeningBracket(sourceBytes[i]))
+            {
+                // a sub-element bracket was openend
+                numOpenBrackets++;
+            }
+            else if (isClosingBracket(sourceBytes[i]))
+            {
+                // a bracket was closed
+                numOpenBrackets--;
+                if (numOpenBrackets == 0)
+                {
+                    // the initial opening bracket is closed now
+                    indexClose = i;
+                    break;
+                }
+            }
+        }
+        
+        return indexClose;
+    }
+
+    protected static boolean isWhitespace(byte b)
     {
         return b == ' ' || b == '\t' || b == '\n' || b == '\r';
     }
-    
-    public static boolean isOpeningBracket(byte b)
+
+    protected static boolean isWhitespace(char c)
+    {
+        return isWhitespace((byte) c);
+    }
+
+    protected static boolean isOpeningBracket(byte b)
     {
         return b == '(';
     }
-    
-    public static boolean isClosingBracket(byte b)
+
+    protected static boolean isOpeningBracket(char c)
+    {
+        return isOpeningBracket((byte) c);
+    }
+
+    protected static boolean isClosingBracket(byte b)
     {
         return b == ')';
     }
-    
-    public static String getIdentationVariant()
+
+    protected static boolean isClosingBracket(char c)
+    {
+        return isClosingBracket((byte) c);
+    }
+
+    protected static String getIdentationCharacter()
     {
         return "\t";
     }
@@ -191,22 +231,26 @@ public class EdifElement
      */
     public String toJson()
     {
-        String s = getIdentation() + "{" + System.lineSeparator();
+        String s = getIdentationString() + "{" + System.lineSeparator();
 
         if (getAttributes().size() > 0)
-            s += getIdentation() + getIdentationVariant() + "\"attributes\": [" + String.join(", ", getAttributes(true)) + "]," + System.lineSeparator();
+            s += getIdentationString() + getIdentationCharacter() + "\"attributes\": [" + String.join(", ", getAttributes(true)) + "]," + System.lineSeparator();
         
         for (EdifElement subElement : getSubElements())
         {
-            s += getIdentation() + getIdentationVariant() + "\"" + subElement.getName() + "\": " + System.lineSeparator();
+            s += getIdentationString() + getIdentationCharacter() + "\"" + subElement.getName() + "\": " + System.lineSeparator();
             s += subElement.toJson();
         }
         
-        s += getIdentation() + "}," + System.lineSeparator();
+        s += getIdentationString() + "}," + System.lineSeparator();
         return s;
     }
+
     
-    
+    /*
+     * Getter and Setter
+     */
+
     public String getName()
     {
         return name;
@@ -228,14 +272,14 @@ public class EdifElement
         hierarchyLevel = level;
     }
     
-    public String getIdentation()
+    public String getIdentationString()
     {
         if (identation != null)
             return identation;
         
         identation = "";
         for (int i=0; i<getHierarchyLevel(); i++)
-            identation += getIdentationVariant();
+            identation += getIdentationCharacter();
         return identation;
     }
     
