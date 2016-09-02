@@ -23,7 +23,6 @@ public class Main
 	    
 	    EdifElement edif = new EdifElement(content);
 	    String json = edif.toJson();
-	    System.out.println(json);
 	    writeFile("example.json", json);
 	}
 	

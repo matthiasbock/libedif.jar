@@ -66,13 +66,15 @@ public class EdifElement
         boolean insideSubElement = false;
         // index of the sub-element's opening bracket
         int indexSubElementBegin = 0;
-
+        
         for (int currentIndex=0; currentIndex < content.length(); currentIndex++)
         {
+            char c = content.charAt(currentIndex);
+
             if (insideSubElement)
             {
                 // possibly end of sub-element reached
-                if (isClosingBracket(content.charAt(currentIndex)))
+                if (isClosingBracket(c))
                 {
                     numOpenBrackets--;
                     
@@ -92,7 +94,7 @@ public class EdifElement
                         indexPreviousWhitespaceCharacter = currentIndex;
                     }
                 }
-                else if (isOpeningBracket(content.charAt(currentIndex)))
+                else if (isOpeningBracket(c))
                 {
                     // the sub-element has sub-elements of it's own
                     // disregard them, they will be parsed below the EdifElement constructor,
@@ -102,47 +104,46 @@ public class EdifElement
             }
             else
             {
-                if (isWhitespace(content.charAt(currentIndex)))
+                if (isWhitespace(c) && previousCharacterWasWhitespace)
                 {
-                    if (previousCharacterWasWhitespace)
-                    {
-                        // disregard multiple whitespace characters in a row
-                    }
-                    else
-                    {
-                        // extract the string between the last and the current whitespace character
-                        String attribute = content.substring(indexPreviousWhitespaceCharacter+1, currentIndex).trim();
+                    // disregard multiple whitespace characters in a row
+                }
+                else if (isWhitespace(c) || isClosingBracket(c))
+                {
+                    // extract the string between the last and the current whitespace character
+                    String attribute = content.substring(indexPreviousWhitespaceCharacter+1, currentIndex).trim();
 
-                        // disregard empty spaces after the sub-element's closing brackets
-                        if (attribute.length() > 0)
+                    // disregard empty spaces after the sub-element's closing brackets
+                    if (attribute.length() > 0)
+                    {
+                        if (getName() == null)
                         {
-                            if (getName() == null)
-                            {
-                                // the element name wasn't set yet
-                                setName(attribute);
-                            }
-                            else
-                            {
-                                // if it's not the name, it's an attribute
-                                addAttribute(attribute);
-                            }
+                            // the element name wasn't set yet
+                            setName(attribute);
+                        }
+                        else
+                        {
+                            // if it's not the name, it's an attribute
+                            addAttribute(attribute);
                         }
                     }
-                    
-                    indexPreviousWhitespaceCharacter = currentIndex;
+                }
+                else if (isOpeningBracket(c))
+                {
+                    // a sub-element begins here
+                    numOpenBrackets = 1;
+                    insideSubElement = true;
+                    indexSubElementBegin = currentIndex;
+                }
+
+                if (isWhitespace(c))
+                {
                     previousCharacterWasWhitespace = true;
+                    indexPreviousWhitespaceCharacter = currentIndex;
                 }
                 else
                 {
                     previousCharacterWasWhitespace = false;
-                    
-                    if (isOpeningBracket(content.charAt(currentIndex)))
-                    {
-                        // a sub-element begins here
-                        numOpenBrackets = 1;
-                        insideSubElement = true;
-                        indexSubElementBegin = currentIndex;
-                    }
                 }
             }
         }
@@ -231,18 +232,39 @@ public class EdifElement
      */
     public String toJson()
     {
-        String s = getIdentationString() + "{" + System.lineSeparator();
-
-        if (getAttributes().size() > 0)
-            s += getIdentationString() + getIdentationCharacter() + "\"attributes\": [" + String.join(", ", getAttributes(true)) + "]," + System.lineSeparator();
+        String s = "";
         
-        for (EdifElement subElement : getSubElements())
+        // has sub-elements: dictionary
+        if (getSubElements().size() > 0)
         {
-            s += getIdentationString() + getIdentationCharacter() + "\"" + subElement.getName() + "\": " + System.lineSeparator();
-            s += subElement.toJson();
+            s = System.lineSeparator() + getIdentationString() + "{" + System.lineSeparator();
+
+            if (getAttributes().size() > 0)
+            {
+                s += getIdentationString() + getIdentationCharacter() + "\"attributes\": [" + String.join(", ", getAttributes(true)) + "]," + System.lineSeparator();
+            }
+            
+            for (EdifElement subElement : getSubElements())
+            {
+                s += getIdentationString() + getIdentationCharacter() + "\"" + subElement.getName() + "\": ";
+                s += subElement.toJson();
+            }
+            
+            s += getIdentationString() + "}," + System.lineSeparator();
         }
-        
-        s += getIdentationString() + "}," + System.lineSeparator();
+        else
+        // has no sub-elements: array
+        {
+            s = "[";
+
+            if (getAttributes().size() > 0)
+            {
+                s += String.join(", ", getAttributes(true));
+            }
+
+            s += "]," + System.lineSeparator();
+        }
+
         return s;
     }
 
