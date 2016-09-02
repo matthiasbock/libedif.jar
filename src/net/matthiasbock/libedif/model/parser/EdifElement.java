@@ -248,7 +248,8 @@ public class EdifElement
      */
     public String toJson()
     {
-        String s = "";
+        // has neither sub-elements, nor attributes: empty
+        String s = "\"\"," + System.lineSeparator();
         
         // has sub-elements: export as dictionary
         if (getSubElements().size() > 0)
@@ -256,10 +257,15 @@ public class EdifElement
             // begin JSON element
             s = System.lineSeparator() + getIdentationString() + "{" + System.lineSeparator();
 
-            // append attributes
-            if (getAttributes().size() > 0)
+            // append more than attribute
+            if (getAttributes().size() > 1)
             {
                 s += getIdentationString() + getIdentationCharacter() + "\"attributes\": [" + String.join(", ", getAttributes(true)) + "]," + System.lineSeparator();
+            }
+            // append one attribute
+            else if (getAttributes().size() == 1)
+            {
+                s += getIdentationString() + getIdentationCharacter() + "\"attribute\": " + getAttributes(true).get(0) + "," + System.lineSeparator();
             }
 
             // append sub-elements
@@ -272,8 +278,9 @@ public class EdifElement
             // end JSON element
             s += getIdentationString() + "}," + System.lineSeparator();
         }
-        else
-        // has no sub-elements: export as array
+
+        // has no sub-elements, but several attributes: export as array
+        else if (getAttributes().size() > 1)
         {
             // begin array
             s = "[";
@@ -286,6 +293,12 @@ public class EdifElement
 
             // end array
             s += "]," + System.lineSeparator();
+        }
+
+        // has no sub-elements, but one attribute: export as string
+        else if (getAttributes().size() == 1)
+        {
+            s = getAttributes(true).get(0) + "," + System.lineSeparator();
         }
 
         return s;
