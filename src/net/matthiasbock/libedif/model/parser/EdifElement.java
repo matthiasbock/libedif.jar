@@ -50,7 +50,9 @@ public class EdifElement
         }
         
         // parse element without brackets
-        parseBracketEnclosedString(s.substring(indexOpen+1, indexClose-1));
+        String content = s.substring(indexOpen+1, indexClose);
+        //System.out.printf("Begin: %d, End: %d, String: %s\n", indexOpen, indexClose, content);
+        parseBracketEnclosedString(content);
     }
 
     /**
@@ -70,6 +72,7 @@ public class EdifElement
         for (int currentIndex=0; currentIndex < content.length(); currentIndex++)
         {
             char c = content.charAt(currentIndex);
+            //System.out.printf("Char: %c, ", c);
 
             if (insideSubElement)
             {
@@ -77,7 +80,7 @@ public class EdifElement
                 if (isClosingBracket(c))
                 {
                     numOpenBrackets--;
-                    
+
                     // was it the last open bracket?
                     if (numOpenBrackets == 0)
                     {
@@ -108,10 +111,29 @@ public class EdifElement
                 {
                     // disregard multiple whitespace characters in a row
                 }
-                else if (isWhitespace(c) || isClosingBracket(c))
+                else if (isOpeningBracket(c))
                 {
-                    // extract the string between the last and the current whitespace character
-                    String attribute = content.substring(indexPreviousWhitespaceCharacter+1, currentIndex).trim();
+                    // a sub-element begins here
+                    numOpenBrackets = 1;
+                    insideSubElement = true;
+                    indexSubElementBegin = currentIndex;
+                }
+                else if (isWhitespace(c) || currentIndex == content.length()-1)
+                {
+                    String attribute;
+
+                    // is this the last character of the content string?
+                    if (currentIndex == content.length()-1)
+                    {
+                        // extract string since last whitespace character
+                        attribute = content.substring(indexPreviousWhitespaceCharacter+1, currentIndex+1).trim();
+                    }
+                    else
+                    {
+                        // extract string between the last and the current whitespace character
+                        attribute = content.substring(indexPreviousWhitespaceCharacter+1, currentIndex).trim();
+                    }
+                    //System.out.println("Attribute: "+attribute);
 
                     // disregard empty spaces after the sub-element's closing brackets
                     if (attribute.length() > 0)
@@ -128,14 +150,8 @@ public class EdifElement
                         }
                     }
                 }
-                else if (isOpeningBracket(c))
-                {
-                    // a sub-element begins here
-                    numOpenBrackets = 1;
-                    insideSubElement = true;
-                    indexSubElementBegin = currentIndex;
-                }
 
+                // remember, whether the current character was whitespace or not
                 if (isWhitespace(c))
                 {
                     previousCharacterWasWhitespace = true;
@@ -234,34 +250,41 @@ public class EdifElement
     {
         String s = "";
         
-        // has sub-elements: dictionary
+        // has sub-elements: export as dictionary
         if (getSubElements().size() > 0)
         {
+            // begin JSON element
             s = System.lineSeparator() + getIdentationString() + "{" + System.lineSeparator();
 
+            // append attributes
             if (getAttributes().size() > 0)
             {
                 s += getIdentationString() + getIdentationCharacter() + "\"attributes\": [" + String.join(", ", getAttributes(true)) + "]," + System.lineSeparator();
             }
-            
+
+            // append sub-elements
             for (EdifElement subElement : getSubElements())
             {
                 s += getIdentationString() + getIdentationCharacter() + "\"" + subElement.getName() + "\": ";
                 s += subElement.toJson();
             }
             
+            // end JSON element
             s += getIdentationString() + "}," + System.lineSeparator();
         }
         else
-        // has no sub-elements: array
+        // has no sub-elements: export as array
         {
+            // begin array
             s = "[";
 
+            // append attributes
             if (getAttributes().size() > 0)
             {
                 s += String.join(", ", getAttributes(true));
             }
 
+            // end array
             s += "]," + System.lineSeparator();
         }
 
@@ -280,7 +303,6 @@ public class EdifElement
 
     public void setName(String name)
     {
-        //System.out.println("Element name: \""+name+"\"");
         this.name = name;
     }
 
@@ -325,7 +347,6 @@ public class EdifElement
     
     public boolean addAttribute(String s)
     {
-        //System.out.printf("\tNew attribute: %s\n", s);
         return attributes.add(s);
     }
 
