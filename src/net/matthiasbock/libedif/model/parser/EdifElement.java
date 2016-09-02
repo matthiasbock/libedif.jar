@@ -377,7 +377,40 @@ public class EdifElement
     {
         this.subElements = subElements;
     }
-    
+
+    public EdifElement getSubElementByName(String name)
+    {
+        // search for sub-element with that name
+        for (EdifElement e : getSubElements())
+        {
+            if (e.getName() == name)
+            {
+                return e;
+            }
+        }
+
+        // not found
+        return null;
+    }
+
+    public List<EdifElement> getSubElementsByName(String name)
+    {
+        // begin with empty list
+        List<EdifElement> list = new ArrayList<>();
+
+        // search for sub-element with that name
+        for (EdifElement e : getSubElements())
+        {
+            if (e.getName() == name)
+            {
+                list.add(e);
+            }
+        }
+
+        // not found
+        return list;
+    }
+
     public boolean addSubElement(EdifElement e)
     {
         return subElements.add(e);
