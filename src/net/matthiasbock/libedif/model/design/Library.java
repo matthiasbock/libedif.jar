@@ -15,7 +15,7 @@ public class Library
     private String name = null;
     private List<Cell> cells = null;
 
-    public Library(EdifElement e)
+    public Library(EdifElement edif)
     {
         // TODO Auto-generated constructor stub
     }

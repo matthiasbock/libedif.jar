@@ -14,8 +14,17 @@ public class Design
     private Library libraryRef = null;
     private Cell cellRef = null;
 
-    public Design(EdifElement subElementByName)
+    public Design(EdifElement edif)
     {
-        // TODO Auto-generated constructor stub
+        name = edif.getSubElementByName("rename").getFirstAttribute();
+        System.out.println("Design name: "+name);
+
+        part = edif.getSubElementByAttribute("property", "PART").getSubElementByName("string").getFirstAttribute();
+        System.out.println("Target FPGA: "+part);
+
+        EdifElement c = edif.getSubElementByName("cellRef");
+        String libraryRefName = c.getSubElementByName("libraryRef").getFirstAttribute();
+        String cellRefName = c.getSubElementByName("rename").getFirstAttribute();
+        System.out.printf("Implementation is stored in library \"%s\", cell \"%s\"\n ", libraryRefName, cellRefName);
     }
 }

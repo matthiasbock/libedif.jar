@@ -56,8 +56,9 @@ public class EdifElement
     }
 
     /**
+     * Populate attribute and subelement arrays by parsing a string
      * 
-     * @param content
+     * @param content: String to parse as EDIF
      */
     private void parseBracketEnclosedString(String content)
     {
@@ -350,12 +351,25 @@ public class EdifElement
         if (!quoted)
             return getAttributes();
         
+        // create a list, in which every attribute is in quotes
         List<String> l = new ArrayList<>();
         for (String s : getAttributes())
         {
             l.add("\"" + s + "\"");
         }
         return l;
+    }
+
+    public String getFirstAttribute()
+    {
+        // return first element in array
+        if (attributes.size() > 0)
+        {
+            return attributes.get(0);
+        }
+
+        // this element has no attributes
+        return null;
     }
     
     public boolean addAttribute(String s)
@@ -383,7 +397,7 @@ public class EdifElement
         // search for sub-element with that name
         for (EdifElement e : getSubElements())
         {
-            if (e.getName() == name)
+            if (e.getName().equals(name))
             {
                 return e;
             }
@@ -401,7 +415,7 @@ public class EdifElement
         // search for sub-element with that name
         for (EdifElement e : getSubElements())
         {
-            if (e.getName() == name)
+            if (e.getName().equals(name))
             {
                 list.add(e);
             }
@@ -411,6 +425,21 @@ public class EdifElement
         return list;
     }
 
+    public EdifElement getSubElementByAttribute(String name, String attribute)
+    {
+        // search all sub-elements for one with specified attribute
+        for (EdifElement e : getSubElementsByName(name))
+        {
+            if (e.getAttributes().contains(attribute))
+            {
+                return e;
+            }
+        }
+
+        // not found
+        return null;
+    }
+    
     public boolean addSubElement(EdifElement e)
     {
         return subElements.add(e);

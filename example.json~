@@ -1,0 +1,6696 @@
+
+{
+	"attribute": "top",
+	"edifVersion": ["2", "0", "0"],
+	"edifLevel": "0",
+	"keywordMap": 
+	{
+		"keywordLevel": "0",
+	},
+	"status": 
+	{
+		"written": 
+		{
+			"timeStamp": ["2016", "6", "20", "16", "23", "10"],
+			"author": [""Lattice", "Semiconductor", "Corp.""],
+			"program": 
+			{
+				"attribute": ""SBT"",
+				"version": ""2016.02.27810"",
+			},
+		},
+	},
+	"library": 
+	{
+		"attribute": "SBT_DESIGN",
+		"edifLevel": "0",
+		"technology": 
+		{
+			"numberDefinition": "",
+		},
+		"cell": 
+		{
+			"rename": ["ICE_CARRY_IN_MUX", ""ICE_CARRY_IN_MUX""],
+			"cellType": "GENERIC",
+			"view": 
+			{
+				"attribute": "INTERFACE",
+				"viewType": "NETLIST",
+				"interface": 
+				{
+					"port": 
+					{
+						"attribute": "carryinitin",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "carryinitout",
+						"direction": "OUTPUT",
+					},
+				},
+				"contents": 
+				{
+					"net": 
+					{
+						"rename": ["carryinitin", ""carryinitin""],
+						"joined": 
+						{
+							"portRef": "carryinitin",
+						},
+					},
+					"net": 
+					{
+						"rename": ["carryinitout", ""carryinitout""],
+						"joined": 
+						{
+							"portRef": "carryinitout",
+						},
+					},
+				},
+			},
+		},
+		"cell": 
+		{
+			"rename": ["SB_LUT4", ""SB_LUT4""],
+			"cellType": "GENERIC",
+			"view": 
+			{
+				"attribute": "INTERFACE",
+				"viewType": "NETLIST",
+				"interface": 
+				{
+					"port": 
+					{
+						"attribute": "I3",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "I1",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "O",
+						"direction": "OUTPUT",
+					},
+					"port": 
+					{
+						"attribute": "I2",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "I0",
+						"direction": "INPUT",
+					},
+				},
+			},
+		},
+		"cell": 
+		{
+			"rename": ["SB_DFFSR", ""SB_DFFSR""],
+			"cellType": "GENERIC",
+			"view": 
+			{
+				"attribute": "INTERFACE",
+				"viewType": "NETLIST",
+				"interface": 
+				{
+					"port": 
+					{
+						"attribute": "R",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "Q",
+						"direction": "OUTPUT",
+					},
+					"port": 
+					{
+						"attribute": "D",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "C",
+						"direction": "INPUT",
+					},
+				},
+			},
+		},
+		"cell": 
+		{
+			"rename": ["ICE_IO", ""ICE_IO""],
+			"cellType": "GENERIC",
+			"view": 
+			{
+				"attribute": "INTERFACE",
+				"viewType": "NETLIST",
+				"interface": 
+				{
+					"port": 
+					{
+						"attribute": "OUTPUTCLK",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "DIN1",
+						"direction": "OUTPUT",
+					},
+					"port": 
+					{
+						"attribute": "PACKAGEPIN",
+						"direction": "INOUT",
+					},
+					"port": 
+					{
+						"attribute": "LATCHINPUTVALUE",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "INPUTCLK",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "DOUT0",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "DIN0",
+						"direction": "OUTPUT",
+					},
+					"port": 
+					{
+						"attribute": "OUTPUTENABLE",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "DOUT1",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "CLOCKENABLE",
+						"direction": "INPUT",
+					},
+				},
+			},
+		},
+		"cell": 
+		{
+			"rename": ["SB_DFFR", ""SB_DFFR""],
+			"cellType": "GENERIC",
+			"view": 
+			{
+				"attribute": "INTERFACE",
+				"viewType": "NETLIST",
+				"interface": 
+				{
+					"port": 
+					{
+						"attribute": "R",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "Q",
+						"direction": "OUTPUT",
+					},
+					"port": 
+					{
+						"attribute": "D",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "C",
+						"direction": "INPUT",
+					},
+				},
+			},
+		},
+		"cell": 
+		{
+			"rename": ["SB_CARRY", ""SB_CARRY""],
+			"cellType": "GENERIC",
+			"view": 
+			{
+				"attribute": "INTERFACE",
+				"viewType": "NETLIST",
+				"interface": 
+				{
+					"port": 
+					{
+						"attribute": "I1",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "I0",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "CO",
+						"direction": "OUTPUT",
+					},
+					"port": 
+					{
+						"attribute": "CI",
+						"direction": "INPUT",
+					},
+				},
+			},
+		},
+		"cell": 
+		{
+			"rename": ["ICE_GB_IO", ""ICE_GB_IO""],
+			"cellType": "GENERIC",
+			"view": 
+			{
+				"attribute": "INTERFACE",
+				"viewType": "NETLIST",
+				"interface": 
+				{
+					"port": 
+					{
+						"attribute": "OUTPUTCLK",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "DIN1",
+						"direction": "OUTPUT",
+					},
+					"port": 
+					{
+						"attribute": "PACKAGEPIN",
+						"direction": "INOUT",
+					},
+					"port": 
+					{
+						"attribute": "LATCHINPUTVALUE",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "INPUTCLK",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "DOUT0",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "DIN0",
+						"direction": "OUTPUT",
+					},
+					"port": 
+					{
+						"attribute": "OUTPUTENABLE",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "GLOBALBUFFEROUTPUT",
+						"direction": "OUTPUT",
+					},
+					"port": 
+					{
+						"attribute": "DOUT1",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "CLOCKENABLE",
+						"direction": "INPUT",
+					},
+				},
+			},
+		},
+		"cell": 
+		{
+			"rename": ["GND", ""GND""],
+			"cellType": "GENERIC",
+			"view": 
+			{
+				"attribute": "INTERFACE",
+				"viewType": "NETLIST",
+				"interface": 
+				{
+					"port": 
+					{
+						"attribute": "Y",
+						"direction": "OUTPUT",
+					},
+				},
+			},
+		},
+		"cell": 
+		{
+			"rename": ["SB_DFFE", ""SB_DFFE""],
+			"cellType": "GENERIC",
+			"view": 
+			{
+				"attribute": "INTERFACE",
+				"viewType": "NETLIST",
+				"interface": 
+				{
+					"port": 
+					{
+						"attribute": "Q",
+						"direction": "OUTPUT",
+					},
+					"port": 
+					{
+						"attribute": "E",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "D",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "C",
+						"direction": "INPUT",
+					},
+				},
+			},
+		},
+		"cell": 
+		{
+			"rename": ["ICE_GB", ""ICE_GB""],
+			"cellType": "GENERIC",
+			"view": 
+			{
+				"attribute": "INTERFACE",
+				"viewType": "NETLIST",
+				"interface": 
+				{
+					"port": 
+					{
+						"attribute": "USERSIGNALTOGLOBALBUFFER",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "GLOBALBUFFEROUTPUT",
+						"direction": "OUTPUT",
+					},
+				},
+			},
+		},
+		"cell": 
+		{
+			"rename": ["VCC", ""VCC""],
+			"cellType": "GENERIC",
+			"view": 
+			{
+				"attribute": "INTERFACE",
+				"viewType": "NETLIST",
+				"interface": 
+				{
+					"port": 
+					{
+						"attribute": "Y",
+						"direction": "OUTPUT",
+					},
+				},
+			},
+		},
+		"cell": 
+		{
+			"rename": ["SB_DFF", ""SB_DFF""],
+			"cellType": "GENERIC",
+			"view": 
+			{
+				"attribute": "INTERFACE",
+				"viewType": "NETLIST",
+				"interface": 
+				{
+					"port": 
+					{
+						"attribute": "Q",
+						"direction": "OUTPUT",
+					},
+					"port": 
+					{
+						"attribute": "D",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "C",
+						"direction": "INPUT",
+					},
+				},
+			},
+		},
+	},
+	"library": 
+	{
+		"attribute": "worklib",
+		"edifLevel": "0",
+		"technology": 
+		{
+			"numberDefinition": "",
+		},
+		"cell": 
+		{
+			"rename": ["top", ""top""],
+			"cellType": "GENERIC",
+			"view": 
+			{
+				"attribute": "INTERFACE",
+				"viewType": "NETLIST",
+				"interface": 
+				{
+					"port": 
+					{
+						"rename": ["delay_setup_4", ""delay_setup[4]""],
+						"direction": "OUTPUT",
+						"property": 
+						{
+							"attribute": "Define",
+							"string": ""delay_setup[9:0]"",
+						},
+					},
+					"port": 
+					{
+						"attribute": "tx",
+						"direction": "OUTPUT",
+					},
+					"port": 
+					{
+						"rename": ["delay_setup_7", ""delay_setup[7]""],
+						"direction": "OUTPUT",
+						"property": 
+						{
+							"attribute": "Define",
+							"string": ""delay_setup[9:0]"",
+						},
+					},
+					"port": 
+					{
+						"rename": ["delay_setup_3", ""delay_setup[3]""],
+						"direction": "OUTPUT",
+						"property": 
+						{
+							"attribute": "Define",
+							"string": ""delay_setup[9:0]"",
+						},
+					},
+					"port": 
+					{
+						"attribute": "main_clock",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "highside_l",
+						"direction": "OUTPUT",
+					},
+					"port": 
+					{
+						"attribute": "highside_h",
+						"direction": "OUTPUT",
+					},
+					"port": 
+					{
+						"rename": ["delay_setup_6", ""delay_setup[6]""],
+						"direction": "OUTPUT",
+						"property": 
+						{
+							"attribute": "Define",
+							"string": ""delay_setup[9:0]"",
+						},
+					},
+					"port": 
+					{
+						"rename": ["delay_setup_2", ""delay_setup[2]""],
+						"direction": "OUTPUT",
+						"property": 
+						{
+							"attribute": "Define",
+							"string": ""delay_setup[9:0]"",
+						},
+					},
+					"port": 
+					{
+						"attribute": "lowside_l",
+						"direction": "OUTPUT",
+					},
+					"port": 
+					{
+						"attribute": "lowside_h",
+						"direction": "OUTPUT",
+					},
+					"port": 
+					{
+						"rename": ["delay_setup_9", ""delay_setup[9]""],
+						"direction": "OUTPUT",
+						"property": 
+						{
+							"attribute": "Define",
+							"string": ""delay_setup[9:0]"",
+						},
+					},
+					"port": 
+					{
+						"rename": ["delay_setup_5", ""delay_setup[5]""],
+						"direction": "OUTPUT",
+						"property": 
+						{
+							"attribute": "Define",
+							"string": ""delay_setup[9:0]"",
+						},
+					},
+					"port": 
+					{
+						"rename": ["delay_setup_1", ""delay_setup[1]""],
+						"direction": "OUTPUT",
+						"property": 
+						{
+							"attribute": "Define",
+							"string": ""delay_setup[9:0]"",
+						},
+					},
+					"port": 
+					{
+						"attribute": "delay_out",
+						"direction": "OUTPUT",
+					},
+					"port": 
+					{
+						"attribute": "delay_in",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"attribute": "rx",
+						"direction": "INPUT",
+					},
+					"port": 
+					{
+						"rename": ["delay_setup_8", ""delay_setup[8]""],
+						"direction": "OUTPUT",
+						"property": 
+						{
+							"attribute": "Define",
+							"string": ""delay_setup[9:0]"",
+						},
+					},
+					"port": 
+					{
+						"rename": ["delay_setup_0", ""delay_setup[0]""],
+						"direction": "OUTPUT",
+						"property": 
+						{
+							"attribute": "Define",
+							"string": ""delay_setup[9:0]"",
+						},
+					},
+				},
+				"contents": 
+				{
+					"instance": 
+					{
+						"rename": ["IN_MUX_bfv_2_7_0_", ""IN_MUX_bfv_2_7_0_""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_CARRY_IN_MUX",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "C_INIT",
+							"string": ""00"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["IN_MUX_bfv_2_8_0_", ""IN_MUX_bfv_2_8_0_""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_CARRY_IN_MUX",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "C_INIT",
+							"string": ""10"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,8,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["CONSTANT_ONE_LUT4", ""CONSTANT_ONE_LUT4""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1111111111111111"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,5,5"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_fast_8_THRU_LUT4_0", ""pulse_counter_fast_8_THRU_LUT4_0""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1111111100000000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,8,3"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_8_THRU_LUT4_0", ""pulse_counter_8_THRU_LUT4_0""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1111111100000000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,6,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_fast_13_THRU_LUT4_0", ""pulse_counter_fast_13_THRU_LUT4_0""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1111111100000000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,8,2"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_13_THRU_LUT4_0", ""pulse_counter_13_THRU_LUT4_0""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1111111100000000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,5,3"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_fast_12_THRU_LUT4_0", ""pulse_counter_fast_12_THRU_LUT4_0""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1111111100000000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,8,4"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_12_THRU_LUT4_0", ""pulse_counter_12_THRU_LUT4_0""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1111111100000000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,5,2"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNISSKE4_1_medium_resolution_counter_overflown_0_REP_LUT4_0", ""pulse_counter_RNISSKE4_1_medium_resolution_counter_overflown_0_REP_LUT4_0""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1000000000000000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,6,3"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["out_is_high_1_THRU_LUT4_0", ""out_is_high_1_THRU_LUT4_0""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1111111100000000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,6,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_13", ""pulse_counter[13]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,5,3"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_h_1_RNO_2", ""lowside_h_1_RNO_2""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0000001011111111"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""4,7,3"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["delay_setup_obuf_5", ""delay_setup_obuf[5]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""011001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""0,8,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_h_1", ""lowside_h_1""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""4,7,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_11_c_RNIVFSH", ""un2_pulse_counter_1_cry_11_c_RNIVFSH""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1001100101100110"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,8,3"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNO_0", ""pulse_counter_RNO[0]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0101010101010101"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,6,7"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNIS4L01_9", ""pulse_counter_RNIS4L01[9]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "CASCADING",
+							"string": ""TRUE"",
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1000000010000000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,7,3"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNI9FOP4_14", ""pulse_counter_RNI9FOP4[14]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0101000100000000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,7,4"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_2", ""pulse_counter[2]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_l_1_RNO_4", ""lowside_l_1_RNO_4""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1111111111111110"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,6,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_7_c", ""un2_pulse_counter_1_cry_7_c""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_CARRY",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,6"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["out_is_high_ret_2_RNO", ""out_is_high_ret_2_RNO""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0010001000100010"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,6,7"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["out_is_high_1_RNITKI01", ""out_is_high_1_RNITKI01""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1101011110000010"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,6,6"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["main_clock_ibuf_gb_io", ""main_clock_ibuf_gb_io""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_GB_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""000001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""0,8,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["delay_setup_obuf_1", ""delay_setup_obuf[1]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""011001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""0,3,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_5", ""pulse_counter[5]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,4"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_l_1_RNO_3", ""lowside_l_1_RNO_3""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "CASCADING",
+							"string": ""TRUE"",
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1000101011111111"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,5,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["delay_out_obuf", ""delay_out_obuf""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""011001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""12,17,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_8_c", ""un2_pulse_counter_1_cry_8_c""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_CARRY",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,7"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_fast_13", ""pulse_counter_fast[13]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,8,2"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNO_4", ""pulse_counter_RNO[4]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1001100101100110"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,3"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_l_1_RNO_8", ""lowside_l_1_RNO_8""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1111111110000000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,7,2"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["GND", ""GND""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "GND",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""-1,-1,-1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_14", ""pulse_counter[14]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,8,5"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["out_is_high_ret_3", ""out_is_high_ret_3""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFE",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,6,5"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["out_is_high_ret_0_RNO_0", ""out_is_high_ret_0_RNO_0""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "CASCADING",
+							"string": ""TRUE"",
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0010101010101010"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,7,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_h_1_RNO_5", ""lowside_h_1_RNO_5""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0000000100000001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,5,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["delay_setup_obuf_4", ""delay_setup_obuf[4]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""011001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""0,6,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_7_c_RNI9FPG", ""un2_pulse_counter_1_cry_7_c_RNI9FPG""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1001100101100110"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,7"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_11_c", ""un2_pulse_counter_1_cry_11_c""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_CARRY",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,8,2"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["out_is_high_ret_0_RNO", ""out_is_high_ret_0_RNO""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1100100111001100"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,7,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNO_3", ""pulse_counter_RNO[3]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1001100101100110"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,2"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_1", ""pulse_counter[1]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,6,6"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["out_is_high_1_RNISKI01", ""out_is_high_1_RNISKI01""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "CASCADING",
+							"string": ""TRUE"",
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0111110100101000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""4,6,2"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_l_1_RNO_7", ""lowside_l_1_RNO_7""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "CASCADING",
+							"string": ""TRUE"",
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1111111111111110"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,6,2"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNIPMCO_1", ""pulse_counter_RNIPMCO[1]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0100000001000000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,6,5"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["out_is_high_1", ""out_is_high_1""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFE",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,6,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_5_c", ""un2_pulse_counter_1_cry_5_c""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_CARRY",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,4"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_10", ""pulse_counter[10]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,8,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_h_1_RNO_1", ""lowside_h_1_RNO_1""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0000000100000011"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""4,8,7"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["delay_setup_obuf_0", ""delay_setup_obuf[0]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""011001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""0,2,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_13_c", ""un2_pulse_counter_1_cry_13_c""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_CARRY",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,8,4"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_4", ""pulse_counter[4]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,3"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_l_1_RNO_2", ""lowside_l_1_RNO_2""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1100010000000000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,7,5"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["delay_setup_obuf_9", ""delay_setup_obuf[9]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""011001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""0,12,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_fast_RNI69G31_8", ""pulse_counter_fast_RNI69G31[8]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "CASCADING",
+							"string": ""TRUE"",
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0000000100000001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,8,5"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_fast_12", ""pulse_counter_fast[12]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,8,4"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNO_7", ""pulse_counter_RNO[7]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1001100101100110"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,6"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["delay_setup_obuf_2", ""delay_setup_obuf[2]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""011001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""0,4,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNI1KTC1_7", ""pulse_counter_RNI1KTC1[7]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "CASCADING",
+							"string": ""TRUE"",
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0000000000000001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,7,6"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_6", ""pulse_counter[6]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,5"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["out_is_high_ret_2", ""out_is_high_ret_2""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFE",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,6,7"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_l_1_RNO_0", ""lowside_l_1_RNO_0""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1101010101010101"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,5,4"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_h_1_RNO_4", ""lowside_h_1_RNO_4""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "CASCADING",
+							"string": ""TRUE"",
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0010111111111111"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""4,8,6"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_4_c", ""un2_pulse_counter_1_cry_4_c""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_CARRY",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,3"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_3_c", ""un2_pulse_counter_1_cry_3_c""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_CARRY",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,2"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["tx_obuf", ""tx_obuf""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""011001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""0,12,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNO_5", ""pulse_counter_RNO[5]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1001100101100110"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,4"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNI9FOP4_1_14", ""pulse_counter_RNI9FOP4_1[14]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_GB",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""0,8,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNO_2", ""pulse_counter_RNO[2]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1001100101100110"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_0", ""pulse_counter[0]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,6,7"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_l_1_RNO_6", ""lowside_l_1_RNO_6""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "CASCADING",
+							"string": ""TRUE"",
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1110010011100100"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,5,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_l_1_RNO", ""lowside_l_1_RNO""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0111111100001000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,4,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNO_10", ""pulse_counter_RNO[10]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1001100101100110"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,8,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNIE0H01_3", ""pulse_counter_RNIE0H01[3]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0000000000000001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,6,4"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_9", ""pulse_counter[9]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,8,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNISSKE4_1", ""pulse_counter_RNISSKE4[1]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1000000000000000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,7,7"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_11", ""pulse_counter[11]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,8,2"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_l_obuf", ""lowside_l_obuf""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""011001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""13,3,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_h_1_RNO_0", ""lowside_h_1_RNO_0""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1110101010101010"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""4,6,6"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["delay_setup_obuf_7", ""delay_setup_obuf[7]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""011001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""0,10,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["VCC", ""VCC""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "VCC",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""-1,-1,-1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_6_c", ""un2_pulse_counter_1_cry_6_c""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_CARRY",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,5"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNO_9", ""pulse_counter_RNO[9]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1001100101100110"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,8,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["medium_resolution_counter_overflown_0", ""medium_resolution_counter_overflown_0""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFE",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,6,3"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["delay_setup_obuf_8", ""delay_setup_obuf[8]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""011001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""0,11,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_12_c_RNI1JTH", ""un2_pulse_counter_1_cry_12_c_RNI1JTH""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1001100101100110"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,8,4"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNO_6", ""pulse_counter_RNO[6]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1001100101100110"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,5"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["out_is_high_ret_3_RNO", ""out_is_high_ret_3_RNO""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0001000100010001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,6,5"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_h_1_RNO", ""lowside_h_1_RNO""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0111000011111000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""4,7,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_1_c", ""un2_pulse_counter_1_cry_1_c""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_CARRY",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNO_14", ""pulse_counter_RNO[14]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0101010110101010"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,8,5"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNII4H01_3", ""pulse_counter_RNII4H01[3]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1111111111111110"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,6,4"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNI9FOP4_0_14", ""pulse_counter_RNI9FOP4_0[14]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0101000100000000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,8,7"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_l_1_RNISEGB1", ""lowside_l_1_RNISEGB1""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0101110001011100"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,5,5"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_h_1_RNO_7", ""lowside_h_1_RNO_7""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "CASCADING",
+							"string": ""TRUE"",
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0000000001111111"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,8,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_h_1_RNIO6CB1", ""lowside_h_1_RNIO6CB1""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0011101000111010"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""4,6,3"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["delay_in_ibuf", ""delay_in_ibuf""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""000001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""7,0,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_9_c", ""un2_pulse_counter_1_cry_9_c""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_CARRY",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,8,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_fast_8", ""pulse_counter_fast[8]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,8,3"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["highside_h_obuf", ""highside_h_obuf""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""011001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""13,6,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["delay_setup_obuf_3", ""delay_setup_obuf[3]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""011001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""0,5,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_7", ""pulse_counter[7]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,6"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_l_1_RNO_1", ""lowside_l_1_RNO_1""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0010000000000000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,5,2"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_10_c", ""un2_pulse_counter_1_cry_10_c""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_CARRY",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,8,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNO_11", ""pulse_counter_RNO[11]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1001100101100110"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,8,2"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNI7RGO_12", ""pulse_counter_RNI7RGO[12]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0001000100010001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,5,3"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_8", ""pulse_counter[8]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,6,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_l_1", ""lowside_l_1""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,4,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_12", ""pulse_counter[12]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,5,2"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_h_1_RNO_3", ""lowside_h_1_RNO_3""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1110010011100100"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,8,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["delay_setup_obuf_6", ""delay_setup_obuf[6]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""011001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""0,9,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNI10AK2_2", ""pulse_counter_RNI10AK2[2]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "CASCADING",
+							"string": ""TRUE"",
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0000101000101010"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,8,6"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_h_1_RNO_8", ""lowside_h_1_RNO_8""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "CASCADING",
+							"string": ""TRUE"",
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1011111110111111"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""4,8,5"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNO_1", ""pulse_counter_RNO[1]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1100001100111100"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,6,6"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_RNIKHP81_6", ""pulse_counter_RNIKHP81[6]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "CASCADING",
+							"string": ""TRUE"",
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1000000000000000"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,6,2"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["pulse_counter_3", ""pulse_counter[3]""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFFSR",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,2"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_l_1_RNO_5", ""lowside_l_1_RNO_5""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""1110010011100100"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,6,3"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["highside_l_obuf", ""highside_l_obuf""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""011001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""13,4,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_2_c", ""un2_pulse_counter_1_cry_2_c""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_CARRY",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,7,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_12_c", ""un2_pulse_counter_1_cry_12_c""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_CARRY",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""2,8,3"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["out_is_high_ret_0", ""out_is_high_ret_0""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_DFF",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""1,7,1"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_h_obuf", ""lowside_h_obuf""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "ICE_IO",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "NEG_TRIGGER",
+							"string": ""0"",
+						},
+						"property": 
+						{
+							"attribute": "PIN_TYPE",
+							"string": ""011001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""13,4,0"",
+						},
+					},
+					"instance": 
+					{
+						"rename": ["lowside_h_1_RNO_6", ""lowside_h_1_RNO_6""],
+						"viewRef": 
+						{
+							"attribute": "INTERFACE",
+							"cellRef": 
+							{
+								"attribute": "SB_LUT4",
+								"libraryRef": "SBT_DESIGN",
+							},
+						},
+						"property": 
+						{
+							"attribute": "CASCADING",
+							"string": ""TRUE"",
+						},
+						"property": 
+						{
+							"attribute": "LUT_INIT",
+							"string": ""0000000100000001"",
+						},
+						"property": 
+						{
+							"attribute": "LOCATION",
+							"string": ""4,7,2"",
+						},
+					},
+					"net": 
+					{
+						"rename": ["bfn_2_7_0_", ""bfn_2_7_0_""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "carryinitout",
+								"instanceRef": "IN_MUX_bfv_2_7_0_",
+							},
+							"portRef": 
+							{
+								"attribute": "CI",
+								"instanceRef": "un2_pulse_counter_1_cry_1_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["bfn_2_8_0_", ""bfn_2_8_0_""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "carryinitout",
+								"instanceRef": "IN_MUX_bfv_2_8_0_",
+							},
+							"portRef": 
+							{
+								"attribute": "CI",
+								"instanceRef": "un2_pulse_counter_1_cry_9_c",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNO_9",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["CONSTANT_ONE_NET", ""CONSTANT_ONE_NET""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "CONSTANT_ONE_LUT4",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_l_1_RNO_6",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_l_1_RNO_5",
+							},
+							"portRef": 
+							{
+								"attribute": "DOUT0",
+								"instanceRef": "delay_setup_obuf_9",
+							},
+							"portRef": 
+							{
+								"attribute": "DOUT0",
+								"instanceRef": "delay_setup_obuf_8",
+							},
+							"portRef": 
+							{
+								"attribute": "DOUT0",
+								"instanceRef": "delay_setup_obuf_7",
+							},
+							"portRef": 
+							{
+								"attribute": "DOUT0",
+								"instanceRef": "delay_setup_obuf_6",
+							},
+							"portRef": 
+							{
+								"attribute": "DOUT0",
+								"instanceRef": "delay_setup_obuf_5",
+							},
+							"portRef": 
+							{
+								"attribute": "DOUT0",
+								"instanceRef": "delay_setup_obuf_4",
+							},
+							"portRef": 
+							{
+								"attribute": "DOUT0",
+								"instanceRef": "delay_setup_obuf_3",
+							},
+							"portRef": 
+							{
+								"attribute": "DOUT0",
+								"instanceRef": "delay_setup_obuf_2",
+							},
+							"portRef": 
+							{
+								"attribute": "DOUT0",
+								"instanceRef": "delay_setup_obuf_1",
+							},
+							"portRef": 
+							{
+								"attribute": "DOUT0",
+								"instanceRef": "delay_setup_obuf_0",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["pulse_counter_fast_8_THRU_CO", ""pulse_counter_fast_8_THRU_CO""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_fast_8_THRU_LUT4_0",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_fast_8",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["pulse_counter_8_THRU_CO", ""pulse_counter_8_THRU_CO""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_8_THRU_LUT4_0",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_8",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["pulse_counter_fast_13_THRU_CO", ""pulse_counter_fast_13_THRU_CO""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_fast_13_THRU_LUT4_0",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_fast_13",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["pulse_counter_13_THRU_CO", ""pulse_counter_13_THRU_CO""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_13_THRU_LUT4_0",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_13",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["pulse_counter_fast_12_THRU_CO", ""pulse_counter_fast_12_THRU_CO""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_fast_12_THRU_LUT4_0",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_fast_12",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["pulse_counter_12_THRU_CO", ""pulse_counter_12_THRU_CO""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_12_THRU_LUT4_0",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_12",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["pulse_counter_RNISSKE4Z0Z_1_medium_resolution_counter_overflown_0_rep", ""pulse_counter_RNISSKE4Z0Z_1_medium_resolution_counter_overflown_0_rep""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNISSKE4_1_medium_resolution_counter_overflown_0_REP_LUT4_0",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "medium_resolution_counter_overflown_0",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["out_is_high_1_THRU_CO", ""out_is_high_1_THRU_CO""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "out_is_high_1_THRU_LUT4_0",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "out_is_high_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_9", ""un2_pulse_counter_1_cry_9""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "CO",
+								"instanceRef": "un2_pulse_counter_1_cry_9_c",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNO_10",
+							},
+							"portRef": 
+							{
+								"attribute": "CI",
+								"instanceRef": "un2_pulse_counter_1_cry_10_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counterZ0Z_2", """],
+							"2": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_2",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "pulse_counter_RNIE0H01_3",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNI10AK2_2",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_h_1_RNO_6",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_l_1_RNO_7",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNO_2",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "un2_pulse_counter_1_cry_2_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["delay_setup_5", """],
+							"5": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "delay_setup_obuf_5",
+							},
+							"portRef": "delay_setup_5",
+						},
+					},
+					"net": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_13", ""un2_pulse_counter_1_cry_13""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "CO",
+								"instanceRef": "un2_pulse_counter_1_cry_13_c",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNO_14",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un1_out_is_high_reti", ""un1_out_is_high_reti""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "out_is_high_ret_2_RNO",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "out_is_high_ret_2",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["lowside_l_1_RNOZ0Z_7", ""lowside_l_1_RNO_7""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_l_1_RNO_7",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_l_1_RNO_5",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["G_3_xx_mm_0_m2_0_a2_4", ""G_3_xx_mm_0_m2_0_a2_4""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_l_1_RNO_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_l_1_RNO",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counter_RNOZ0Z_11", """],
+							"11": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNO_11",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_11",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counter_RNOZ0Z_1", """],
+							"1": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNO_1",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["lowside_l_1_RNOZ0Z_8", ""lowside_l_1_RNO_8""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_l_1_RNO_8",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_l_1_RNO_6",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_2", ""un2_pulse_counter_1_cry_2""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "CO",
+								"instanceRef": "un2_pulse_counter_1_cry_2_c",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNO_3",
+							},
+							"portRef": 
+							{
+								"attribute": "CI",
+								"instanceRef": "un2_pulse_counter_1_cry_3_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_12_c_RNI1JTHZ0", ""un2_pulse_counter_1_cry_12_c_RNI1JTHZ0""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "un2_pulse_counter_1_cry_12_c_RNI1JTH",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_fast_13_THRU_LUT4_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_13_THRU_LUT4_0",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counterZ0Z_9", """],
+							"9": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_9",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNIKHP81_6",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "pulse_counter_RNIS4L01_9",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_h_1_RNO_7",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_l_1_RNO_8",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "out_is_high_ret_0_RNO_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNO_9",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "un2_pulse_counter_1_cry_9_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["lowside_h_1_e_1", ""lowside_h_1_e_1""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "out_is_high_1_RNISKI01",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "lowside_h_1_RNO",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_h_1_RNIO6CB1",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "lowside_h_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["N_6", ""N_6""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNI10AK2_2",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "pulse_counter_RNI9FOP4_14",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "pulse_counter_RNI9FOP4_0_14",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "out_is_high_ret_0_RNO",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un1_pulse_counter_1lto13_c_d", ""un1_pulse_counter_1lto13_c_d""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_l_1_RNO_6",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "lowside_l_1_RNO_3",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counter_RNISSKE4Z0Z_1", """],
+							"1": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNISSKE4_1",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "out_is_high_ret_3_RNO",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "out_is_high_ret_2_RNO",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counterZ0Z_6", """],
+							"6": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_6",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNII4H01_3",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "pulse_counter_RNIKHP81_6",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_h_1_RNO_2",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNO_6",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "un2_pulse_counter_1_cry_6_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["lowside_h_c", ""lowside_h_c""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_h_1_RNIO6CB1",
+							},
+							"portRef": 
+							{
+								"attribute": "DOUT0",
+								"instanceRef": "highside_l_obuf",
+							},
+							"portRef": 
+							{
+								"attribute": "DOUT0",
+								"instanceRef": "lowside_h_obuf",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["lowside_h", ""lowside_h""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "lowside_h_obuf",
+							},
+							"portRef": "lowside_h",
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["delay_setup_9", """],
+							"9": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "delay_setup_obuf_9",
+							},
+							"portRef": "delay_setup_9",
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counter_RNOZ0Z_4", """],
+							"4": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNO_4",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_4",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["out_is_high_retZ0Z_0", ""out_is_high_ret_0""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "out_is_high_ret_0_RNO",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "out_is_high_ret_0",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counterZ0Z_10", """],
+							"10": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_10",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "pulse_counter_RNIKHP81_6",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNIS4L01_9",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_h_1_RNO_7",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_l_1_RNO_8",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "out_is_high_ret_0_RNO_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNO_10",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "un2_pulse_counter_1_cry_10_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["lowside_h_1_RNOZ0Z_7", ""lowside_h_1_RNO_7""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_h_1_RNO_7",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_h_1_RNO_3",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un7_pulse_counter_12_4", ""un7_pulse_counter_12_4""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNIKHP81_6",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "pulse_counter_RNISSKE4_1_medium_resolution_counter_overflown_0_REP_LUT4_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_h_1_RNO_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_l_1_RNO_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "pulse_counter_RNISSKE4_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_6", ""un2_pulse_counter_1_cry_6""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "CO",
+								"instanceRef": "un2_pulse_counter_1_cry_6_c",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNO_7",
+							},
+							"portRef": 
+							{
+								"attribute": "CI",
+								"instanceRef": "un2_pulse_counter_1_cry_7_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un1_pulse_counter_1lto13_c_c", ""un1_pulse_counter_1lto13_c_c""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_l_1_RNO_4",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_l_1_RNO_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["delay_setup_2", """],
+							"2": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "delay_setup_obuf_2",
+							},
+							"portRef": "delay_setup_2",
+						},
+					},
+					"net": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_12", ""un2_pulse_counter_1_cry_12""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "CO",
+								"instanceRef": "un2_pulse_counter_1_cry_12_c",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "un2_pulse_counter_1_cry_12_c_RNI1JTH",
+							},
+							"portRef": 
+							{
+								"attribute": "CI",
+								"instanceRef": "un2_pulse_counter_1_cry_13_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un1_pulse_counter_1_0", ""un1_pulse_counter_1_0""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNI9FOP4_14",
+							},
+							"portRef": 
+							{
+								"attribute": "E",
+								"instanceRef": "out_is_high_ret_2",
+							},
+							"portRef": 
+							{
+								"attribute": "E",
+								"instanceRef": "out_is_high_1",
+							},
+							"portRef": 
+							{
+								"attribute": "E",
+								"instanceRef": "out_is_high_ret_3",
+							},
+							"portRef": 
+							{
+								"attribute": "E",
+								"instanceRef": "medium_resolution_counter_overflown_0",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["out_is_highZ0", ""out_is_high""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "out_is_high_1",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "out_is_high_1_RNISKI01",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "out_is_high_1_RNITKI01",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["lowside_l", ""lowside_l""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "lowside_l_obuf",
+							},
+							"portRef": "lowside_l",
+						},
+					},
+					"net": 
+					{
+						"rename": ["g0_1_iso_g", ""g0_1_iso_g""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "GLOBALBUFFEROUTPUT",
+								"instanceRef": "pulse_counter_RNI9FOP4_1_14",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_0",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_1",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_2",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_3",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_4",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_5",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_6",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_7",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_8",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_9",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_10",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_11",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_12",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_13",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_14",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_fast_8",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_fast_13",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "pulse_counter_fast_12",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["delay_out", ""delay_out""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "delay_out_obuf",
+							},
+							"portRef": "delay_out",
+						},
+					},
+					"net": 
+					{
+						"rename": ["G_3_xx_mm_0_m2_0_a2_5", ""G_3_xx_mm_0_m2_0_a2_5""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_l_1_RNO_1",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_l_1_RNO",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counter_fastZ0Z_13", """],
+							"13": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_fast_13",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "pulse_counter_fast_RNI69G31_8",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "lowside_l_1_RNO_7",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "lowside_h_1_RNO_7",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "lowside_l_1_RNO_8",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un7_pulse_counter_8", ""un7_pulse_counter_8""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNI1KTC1_7",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNISSKE4_1_medium_resolution_counter_overflown_0_REP_LUT4_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_h_1_RNO_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_l_1_RNO_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNISSKE4_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_3", ""un2_pulse_counter_1_cry_3""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "CO",
+								"instanceRef": "un2_pulse_counter_1_cry_3_c",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNO_4",
+							},
+							"portRef": 
+							{
+								"attribute": "CI",
+								"instanceRef": "un2_pulse_counter_1_cry_4_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counterZ0Z_8", """],
+							"8": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_8",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_l_1_RNO_4",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "pulse_counter_RNIPMCO_1",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_h_1_RNO_5",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_l_1_RNO_7",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "un2_pulse_counter_1_cry_7_c_RNI9FPG",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "un2_pulse_counter_1_cry_8_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counterZ0Z_14", """],
+							"14": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_14",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNI1KTC1_7",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_l_1_RNO_2",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNI9FOP4_14",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_h_1_RNO_4",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNI9FOP4_0_14",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "out_is_high_ret_0_RNO",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "pulse_counter_RNO_14",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["N_5", ""N_5""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_h_1_RNO_2",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_h_1_RNO_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un1_medium_resolution_counter_overflown_1_reti", ""un1_medium_resolution_counter_overflown_1_reti""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "out_is_high_ret_3_RNO",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "out_is_high_ret_3",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counterZ0Z_1", """],
+							"1": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_1",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNIPMCO_1",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_h_1_RNO_8",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_l_1_RNO_3",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNO_1",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "un2_pulse_counter_1_cry_1_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["main_clock", ""main_clock""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "main_clock_ibuf_gb_io",
+							},
+							"portRef": "main_clock",
+						},
+					},
+					"net": 
+					{
+						"rename": ["lowside_h_1_0", ""lowside_h_1_0""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "lowside_h_1",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_h_1_RNO",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_h_1_RNIO6CB1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["delay_setup_6", """],
+							"6": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "delay_setup_obuf_6",
+							},
+							"portRef": "delay_setup_6",
+						},
+					},
+					"net": 
+					{
+						"rename": ["out_is_high_retZ0Z_3", ""out_is_high_ret_3""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "out_is_high_ret_3",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_h_1_RNIO6CB1",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "out_is_high_1_RNITKI01",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "lowside_h_1_RNO_4",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["g2", ""g2""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNIS4L01_9",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "pulse_counter_RNI9FOP4_14",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "pulse_counter_RNI9FOP4_0_14",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["g0_i_a3_2", ""g0_i_a3_2""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_h_1_RNO_6",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_h_1_RNO_2",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["G_7_xx_mm_0_m2_0_a2_4", ""G_7_xx_mm_0_m2_0_a2_4""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_h_1_RNO_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_h_1_RNO",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["G_3_xx_mm_0_m2_0_a2_5_sx", ""G_3_xx_mm_0_m2_0_a2_5_sx""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_l_1_RNO_3",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_l_1_RNO_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["G_3_xx_mm_0_m2_0_a2_1", ""G_3_xx_mm_0_m2_0_a2_1""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_l_1_RNO_2",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_l_1_RNO_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counter_i_0", """],
+							"0": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNO_0",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_0",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counterZ0Z_11", """],
+							"11": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_11",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNI1KTC1_7",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "pulse_counter_RNIS4L01_9",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_h_1_RNO_7",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_l_1_RNO_8",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "out_is_high_ret_0_RNO_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNO_11",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "un2_pulse_counter_1_cry_11_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["medium_resolution_counter_overflownZ0", ""medium_resolution_counter_overflown""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "medium_resolution_counter_overflown_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "out_is_high_1_RNISKI01",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "out_is_high_1_RNITKI01",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["lowside_l_1_0", ""lowside_l_1_0""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "lowside_l_1",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "lowside_l_1_RNO",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_l_1_RNISEGB1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un7_pulse_counter_12_5", ""un7_pulse_counter_12_5""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNIE0H01_3",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNISSKE4_1_medium_resolution_counter_overflown_0_REP_LUT4_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "lowside_h_1_RNO_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "lowside_l_1_RNO_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNISSKE4_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_7", ""un2_pulse_counter_1_cry_7""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "CO",
+								"instanceRef": "un2_pulse_counter_1_cry_7_c",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "un2_pulse_counter_1_cry_7_c_RNI9FPG",
+							},
+							"portRef": 
+							{
+								"attribute": "CI",
+								"instanceRef": "un2_pulse_counter_1_cry_8_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["tx", ""tx""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "tx_obuf",
+							},
+							"portRef": "tx",
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counter_RNOZ0Z_5", """],
+							"5": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNO_5",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_5",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["main_clock_c_g", ""main_clock_c_g""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "GLOBALBUFFEROUTPUT",
+								"instanceRef": "main_clock_ibuf_gb_io",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_0",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_1",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_2",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_3",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_4",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_5",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_6",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_7",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_8",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_9",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_10",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_11",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_12",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_13",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_14",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "out_is_high_ret_2",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "out_is_high_1",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "out_is_high_ret_0",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "out_is_high_ret_3",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "lowside_h_1",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "lowside_l_1",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "medium_resolution_counter_overflown_0",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_fast_8",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_fast_13",
+							},
+							"portRef": 
+							{
+								"attribute": "C",
+								"instanceRef": "pulse_counter_fast_12",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["lowside_hZ0Z_1", ""lowside_h_1""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_h_1_RNO",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "lowside_h_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["g0_i_a6_0_1", ""g0_i_a6_0_1""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_h_1_RNO_5",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "lowside_h_1_RNO_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["g0_i_a4_0_0", ""g0_i_a4_0_0""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNI7RGO_12",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNI9FOP4_14",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNI9FOP4_0_14",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "out_is_high_ret_0_RNO_0",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["delay_setup_3", """],
+							"3": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "delay_setup_obuf_3",
+							},
+							"portRef": "delay_setup_3",
+						},
+					},
+					"net": 
+					{
+						"rename": ["delay_in_c", ""delay_in_c""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "DIN0",
+								"instanceRef": "delay_in_ibuf",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "out_is_high_1_RNISKI01",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "out_is_high_1_RNITKI01",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un7_pulse_counter_0_0", ""un7_pulse_counter_0_0""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNIPMCO_1",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "pulse_counter_RNISSKE4_1_medium_resolution_counter_overflown_0_REP_LUT4_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "pulse_counter_RNISSKE4_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_11", ""un2_pulse_counter_1_cry_11""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "CO",
+								"instanceRef": "un2_pulse_counter_1_cry_11_c",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "un2_pulse_counter_1_cry_11_c_RNIVFSH",
+							},
+							"portRef": 
+							{
+								"attribute": "CI",
+								"instanceRef": "un2_pulse_counter_1_cry_12_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counterZ0Z_5", """],
+							"5": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_5",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "pulse_counter_RNII4H01_3",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNIE0H01_3",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_h_1_RNO_6",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNO_5",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "un2_pulse_counter_1_cry_5_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counterZ0Z_13", """],
+							"13": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_13",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "lowside_l_1_RNO_4",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNIKHP81_6",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNI7RGO_12",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_h_1_RNO_5",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "un2_pulse_counter_1_cry_12_c_RNI1JTH",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "un2_pulse_counter_1_cry_13_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["highside_h", ""highside_h""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "highside_h_obuf",
+							},
+							"portRef": "highside_h",
+						},
+					},
+					"net": 
+					{
+						"rename": ["g0_i_1", ""g0_i_1""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_h_1_RNO_4",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_h_1_RNO_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_7_c_RNI9FPGZ0", ""un2_pulse_counter_1_cry_7_c_RNI9FPGZ0""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "un2_pulse_counter_1_cry_7_c_RNI9FPG",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_fast_8_THRU_LUT4_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_8_THRU_LUT4_0",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counter_fastZ0Z_12", """],
+							"12": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_fast_12",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_fast_RNI69G31_8",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_l_1_RNO_7",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_l_1_RNO_6",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_h_1_RNO_3",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counter_RNOZ0Z_7", """],
+							"7": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNO_7",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_7",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["g0_1_iso", ""g0_1_iso""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNI9FOP4_0_14",
+							},
+							"portRef": 
+							{
+								"attribute": "USERSIGNALTOGLOBALBUFFER",
+								"instanceRef": "pulse_counter_RNI9FOP4_1_14",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["VCCG0", ""VCCG0""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Y",
+								"instanceRef": "VCC",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["N_6_0", ""N_6_0""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_h_1_RNO_8",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_h_1_RNO_4",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["pulse_counterZ0Z_0", ""pulse_counterZ0Z_0""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "un2_pulse_counter_1_cry_1_c",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "pulse_counter_RNIPMCO_1",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "pulse_counter_RNO_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_h_1_RNO_8",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_l_1_RNO_3",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNO_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["delay_setup_7", """],
+							"7": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "delay_setup_obuf_7",
+							},
+							"portRef": "delay_setup_7",
+						},
+					},
+					"net": 
+					{
+						"rename": ["GNDG0", ""GNDG0""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Y",
+								"instanceRef": "GND",
+							},
+							"portRef": 
+							{
+								"attribute": "DOUT0",
+								"instanceRef": "tx_obuf",
+							},
+							"portRef": 
+							{
+								"attribute": "DOUT0",
+								"instanceRef": "delay_out_obuf",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["out_is_high_ret_0_e_1", ""out_is_high_ret_0_e_1""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "out_is_high_ret_0_RNO_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "out_is_high_ret_0_RNO",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["out_is_high_retZ0Z_2", ""out_is_high_ret_2""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "out_is_high_ret_2",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_l_1_RNISEGB1",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "out_is_high_1_RNISKI01",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "lowside_l_1_RNO_2",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["G_7_xx_mm_0_m2_0_a2_5", ""G_7_xx_mm_0_m2_0_a2_5""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_h_1_RNO_1",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_h_1_RNO",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counter_RNOZ0Z_3", """],
+							"3": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNO_3",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_3",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["delay_in", ""delay_in""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "delay_in_ibuf",
+							},
+							"portRef": "delay_in",
+						},
+					},
+					"net": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_4", ""un2_pulse_counter_1_cry_4""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "CO",
+								"instanceRef": "un2_pulse_counter_1_cry_4_c",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNO_5",
+							},
+							"portRef": 
+							{
+								"attribute": "CI",
+								"instanceRef": "un2_pulse_counter_1_cry_5_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["delay_setup_0", """],
+							"0": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "delay_setup_obuf_0",
+							},
+							"portRef": "delay_setup_0",
+						},
+					},
+					"net": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_10", ""un2_pulse_counter_1_cry_10""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "CO",
+								"instanceRef": "un2_pulse_counter_1_cry_10_c",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNO_11",
+							},
+							"portRef": 
+							{
+								"attribute": "CI",
+								"instanceRef": "un2_pulse_counter_1_cry_11_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counterZ0Z_4", """],
+							"4": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_4",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNII4H01_3",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "pulse_counter_RNIE0H01_3",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_h_1_RNO_6",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNO_4",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "un2_pulse_counter_1_cry_4_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["N_9", ""N_9""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_h_1_RNO_3",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_h_1_RNO_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counter_RNOZ0Z_6", """],
+							"6": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNO_6",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_6",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counter_RNOZ0Z_14", """],
+							"14": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNO_14",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_14",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_1", ""un2_pulse_counter_1_cry_1""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "CO",
+								"instanceRef": "un2_pulse_counter_1_cry_1_c",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNO_2",
+							},
+							"portRef": 
+							{
+								"attribute": "CI",
+								"instanceRef": "un2_pulse_counter_1_cry_2_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counter_fastZ0Z_8", """],
+							"8": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_fast_8",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_l_1_RNO_2",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "pulse_counter_fast_RNI69G31_8",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_h_1_RNO_8",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counterZ0Z_12", """],
+							"12": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_12",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "pulse_counter_RNI1KTC1_7",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_l_1_RNO_4",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "pulse_counter_RNI7RGO_12",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_h_1_RNO_5",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "un2_pulse_counter_1_cry_11_c_RNIVFSH",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "un2_pulse_counter_1_cry_12_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["out_is_high_1_RNITKIZ0Z01", ""out_is_high_1_RNITKI01""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "out_is_high_1_RNITKI01",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "lowside_l_1_RNO",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_l_1_RNISEGB1",
+							},
+							"portRef": 
+							{
+								"attribute": "R",
+								"instanceRef": "lowside_l_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_8", ""un2_pulse_counter_1_cry_8""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "CO",
+								"instanceRef": "un2_pulse_counter_1_cry_8_c",
+							},
+							"portRef": 
+							{
+								"attribute": "carryinitin",
+								"instanceRef": "IN_MUX_bfv_2_8_0_",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["un1_pulse_counter_1lto13_d_3", ""un1_pulse_counter_1lto13_d_3""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNII4H01_3",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNI10AK2_2",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_l_1_RNO_5",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counterZ0Z_3", """],
+							"3": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_3",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "pulse_counter_RNII4H01_3",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNIE0H01_3",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_h_1_RNO_2",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNO_3",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "un2_pulse_counter_1_cry_3_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["out_is_high_i_2", ""out_is_high_i_2""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "out_is_high_ret_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "out_is_high_1_THRU_LUT4_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "out_is_high_ret_3_RNO",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "out_is_high_ret_2_RNO",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_h_1_RNO_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_l_1_RNO_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_l_1_RNO_2",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "lowside_h_1_RNO_4",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "out_is_high_ret_0_RNO",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_l_1_RNO_3",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["lowside_lZ0Z_1", ""lowside_l_1""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_l_1_RNO",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "lowside_l_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["delay_setup_4", """],
+							"4": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "delay_setup_obuf_4",
+							},
+							"portRef": "delay_setup_4",
+						},
+					},
+					"net": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_11_c_RNIVFSHZ0", ""un2_pulse_counter_1_cry_11_c_RNIVFSHZ0""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "un2_pulse_counter_1_cry_11_c_RNIVFSH",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_fast_12_THRU_LUT4_0",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_12_THRU_LUT4_0",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counter_RNOZ0Z_9", """],
+							"9": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNO_9",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_9",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counter_RNOZ0Z_2", """],
+							"2": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNO_2",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_2",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counter_RNOZ0Z_10", """],
+							"10": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_RNO_10",
+							},
+							"portRef": 
+							{
+								"attribute": "D",
+								"instanceRef": "pulse_counter_10",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["lowside_l_c", ""lowside_l_c""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_l_1_RNISEGB1",
+							},
+							"portRef": 
+							{
+								"attribute": "DOUT0",
+								"instanceRef": "highside_h_obuf",
+							},
+							"portRef": 
+							{
+								"attribute": "DOUT0",
+								"instanceRef": "lowside_l_obuf",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["highside_l", ""highside_l""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "highside_l_obuf",
+							},
+							"portRef": "highside_l",
+						},
+					},
+					"net": 
+					{
+						"rename": ["un2_pulse_counter_1_cry_5", ""un2_pulse_counter_1_cry_5""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "CO",
+								"instanceRef": "un2_pulse_counter_1_cry_5_c",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "pulse_counter_RNO_6",
+							},
+							"portRef": 
+							{
+								"attribute": "CI",
+								"instanceRef": "un2_pulse_counter_1_cry_6_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["delay_setup_1", """],
+							"1": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "delay_setup_obuf_1",
+							},
+							"portRef": "delay_setup_1",
+						},
+					},
+					"net": 
+					{
+						"rename": ["un1_pulse_counter_1lto13_d", ""un1_pulse_counter_1lto13_d""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "lowside_l_1_RNO_5",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "lowside_l_1_RNO_1",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["rx", ""rx""],
+						"joined": 
+						{
+							"portRef": "rx",
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["pulse_counterZ0Z_7", """],
+							"7": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "Q",
+								"instanceRef": "pulse_counter_7",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "pulse_counter_RNI1KTC1_7",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "lowside_l_1_RNO_4",
+							},
+							"portRef": 
+							{
+								"attribute": "I2",
+								"instanceRef": "pulse_counter_RNI10AK2_2",
+							},
+							"portRef": 
+							{
+								"attribute": "I3",
+								"instanceRef": "lowside_h_1_RNO_2",
+							},
+							"portRef": 
+							{
+								"attribute": "I1",
+								"instanceRef": "pulse_counter_RNO_7",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "un2_pulse_counter_1_cry_7_c",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": ["g0_i_a4_1", ""g0_i_a4_1""],
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "O",
+								"instanceRef": "pulse_counter_fast_RNI69G31_8",
+							},
+							"portRef": 
+							{
+								"attribute": "I0",
+								"instanceRef": "pulse_counter_RNI10AK2_2",
+							},
+						},
+					},
+					"net": 
+					{
+						"rename": 
+						{
+							"attributes": ["delay_setup_8", """],
+							"8": "",
+						},
+						"joined": 
+						{
+							"portRef": 
+							{
+								"attribute": "PACKAGEPIN",
+								"instanceRef": "delay_setup_obuf_8",
+							},
+							"portRef": "delay_setup_8",
+						},
+					},
+				},
+			},
+		},
+	},
+	"design": 
+	{
+		"rename": ["top", ""top""],
+		"cellRef": 
+		{
+			"rename": ["top", ""top""],
+			"libraryRef": "worklib",
+		},
+		"property": 
+		{
+			"attribute": "PART",
+			"string": ""ice40hx1ktq144"",
+		},
+		"property": 
+		{
+			"attribute": "OANETLISTVERSION",
+			"string": ""2016.02"",
+		},
+	},
+},

@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import net.matthiasbock.libedif.model.parser.EdifElement;
+import net.matthiasbock.libedif.model.parser.LatticeEdif;
 
 /**
  * Open EDIF netlist file from Lattice Semiconductor's iCEcube2,
@@ -17,13 +18,20 @@ public class Main
 {
 	public static void main(String[] args)
 	{
+	    // read EDIF from file
 	    String content = readFile("example.edf", false);
 	    if (content == null)
 	        return;
-	    
+
+	    // parse EDIF
 	    EdifElement edif = new EdifElement(content);
+
+	    // export EDIF as JSON
 	    String json = edif.toJson();
 	    writeFile("example.json", json);
+
+	    // interpret EDIF as Lattice FPGA netlist
+	    LatticeEdif myWork = new LatticeEdif(edif);
 	}
 	
 	/**
