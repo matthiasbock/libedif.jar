@@ -1,6 +1,7 @@
-package net.matthiasbock.libedif.model.edif;
+package net.matthiasbock.libedif.model.parser;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Elements, of which an EDIF file consists

@@ -1,8 +1,13 @@
 package net.matthiasbock.libedif.controller;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
-import net.matthiasbock.libedif.model.edif.EdifElement;
+import net.matthiasbock.libedif.model.parser.EdifElement;
 
 /**
  * Open EDIF netlist file from Lattice Semiconductor's iCEcube2,
