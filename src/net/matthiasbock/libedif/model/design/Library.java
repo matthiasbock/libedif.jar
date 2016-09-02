@@ -15,8 +15,15 @@ public class Library
     private String name = null;
     private List<Cell> cells = null;
 
-    public Library(EdifElement edif)
+    public Library(EdifElement edifLibrary)
     {
-        // TODO Auto-generated constructor stub
+        name = edifLibrary.getFirstAttribute();
+        System.out.printf("Library \"%s\"...\n", name);
+
+        cells = new ArrayList<>();
+        for (EdifElement edifCell : edifLibrary.getSubElementsByName("cell"))
+        {
+            cells.add( new Cell(edifCell) );
+        }
     }
 }

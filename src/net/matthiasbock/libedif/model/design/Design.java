@@ -25,6 +25,6 @@ public class Design
         EdifElement c = edif.getSubElementByName("cellRef");
         String libraryRefName = c.getSubElementByName("libraryRef").getFirstAttribute();
         String cellRefName = c.getSubElementByName("rename").getFirstAttribute();
-        System.out.printf("Implementation is stored in library \"%s\", cell \"%s\"\n ", libraryRefName, cellRefName);
+        System.out.printf("Implementation is stored in library \"%s\", cell \"%s\"\n", libraryRefName, cellRefName);
     }
 }

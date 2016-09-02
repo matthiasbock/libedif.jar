@@ -305,6 +305,21 @@ public class EdifElement
         return s;
     }
 
+    @Override
+    public String toString()
+    {
+        String s = "(" + getName() + " " + String.join(",", getAttributes()) + " ";
+
+        for (EdifElement subEdif : getSubElements())
+        {
+            s += subEdif.toString() + " ";
+        }
+
+        s += ")";
+
+        return s;
+    }
+    
     
     /*
      * Getter and Setter
